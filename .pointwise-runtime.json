@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "kind": "cli",
+  "setup": [
+    ["python3", "-I", "-c", "import sys; assert sys.version_info >= (3, 8), sys.version"],
+    ["python3", "-I", "-m", "py_compile", "externaljoin.py", "verify_join.py", "demo_reconcile.py"]
+  ],
+  "verify": ["python3", "-I", "verify_join.py"],
+  "demo": ["python3", "-I", "demo_reconcile.py"]
+}
